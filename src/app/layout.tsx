@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
-import { Theme } from '@radix-ui/themes';
+import { Theme, Flex, Box } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
 import '@radix-ui/themes/layout.css';
 import "./globals.css";
-import Nav from "./_components/navigation/nav";
+import Nav from "./components/navigation/nav";
+import Footer from "./components/footer/footer";
 
 const space_mono = Space_Mono({weight: "400", subsets: ["latin"]});
 
@@ -22,8 +23,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={space_mono.className}>
         <Theme appearance="dark">
-          <Nav />
-          {children}
+            <Flex direction="column" style={{ minHeight: '100vh' }}>
+              <Box style={{ flex: 1 }}>
+                <Nav />
+                <main>{children}</main>
+              </Box>
+            <Footer />
+          </Flex>
         </Theme>
       </body>
     </html>
