@@ -5,24 +5,22 @@ import { Link } from "@radix-ui/themes";
 import { usePathname } from 'next/navigation'
 
 export default function Nav() {
-    return (
-        <Flex asChild direction="row" gap="9" gapY="4">
-            <TabNav.Root size="2" justify="center" wrap="wrap">
-                {navBarLink("/", "Home")}
-                {navBarLink("/about", "About")}
-                {navBarLink("/contact", "Contact")}
-            </TabNav.Root>
-        </Flex>
-    );
-}
-
-function navBarLink(path: string, name: string) {
 
     const pathname = usePathname();
 
     return (
-        <TabNav.Link asChild active={pathname === path}>
-            <Link href={path} size="7">{name}</Link>
-        </TabNav.Link>
-    )
+        <Flex asChild direction="row" gap="9" gapY="4">
+            <TabNav.Root size="2" justify="center" wrap="wrap">
+                <TabNav.Link asChild active={pathname === "/"}>
+                    <Link href="/" size="7">Home</Link>
+                </TabNav.Link>
+                <TabNav.Link asChild active={pathname === "/about"}>
+                    <Link href="/about" size="7">About</Link>
+                </TabNav.Link>
+                <TabNav.Link asChild active={pathname === "/contact"}>
+                    <Link href="/contact" size="7">Contact</Link>
+                </TabNav.Link>
+            </TabNav.Root>
+        </Flex>
+    );
 }
