@@ -6,6 +6,7 @@ import '@radix-ui/themes/layout.css';
 import "./globals.css";
 import Nav from "./components/navigation/nav";
 import Footer from "./components/footer/footer";
+import Image from "next/image";
 
 const space_mono = Space_Mono({weight: "400", subsets: ["latin"]});
 
@@ -23,10 +24,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={space_mono.className}>
         <Theme appearance="dark">
+            <div style={{zIndex: -1, position: "fixed", width: "100vw", height: "100vh"}}>
+              <Image src="/bg.jpg" alt="Not found" layout="fill" objectFit="cover"/>
+            </div>
             <Flex direction="column" style={{ minHeight: '100vh' }}>
               <Box style={{ flex: 1 }}>
                 <Nav />
-                <main>{children}</main>
+                {children}
               </Box>
             <Footer />
           </Flex>
