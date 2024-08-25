@@ -5,7 +5,7 @@ export default function About() {
 
     return (
         <Container asChild size={{initial: "2", xs: "2", xl: "4"}} align="center" m={{initial: "6", xl: "9"}}>
-            <Flex direction="column" minHeight="80vh">
+            <Flex direction="column" minHeight="70vh">
                 <Heading size={{initial: "6", xs : "6", xl: "8"}}>
                     About Me
                 </Heading>
