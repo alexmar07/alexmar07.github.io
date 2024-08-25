@@ -20,7 +20,7 @@ export default function About() {
                     <Box height="3vh"></Box>
                     Sono un appassionato di sviluppo Backend anche perché non ho molto occhio per il design (questo sito ne è la conferma).
                     Mi piace scrivere codice in vari linguaggi di programmazione come Go (il mio preferito), Python e PHP e,
-                    quando non lo faccio, gestisco l'infrastruttura delle applicazioni in cloud (AWS is the best, change my mind).
+                    quando non lo faccio, gestisco l&apos;infrastruttura delle applicazioni in cloud (AWS is the best, change my mind).
 
                     <Box height="3vh"></Box>
                     La parte più bella del mio lavoro? Risolvere problemi di qualsiasi genere e,
@@ -38,12 +38,3 @@ export default function About() {
     );
 
 }
-
-
-function calculateAge(dob: Date): number {
-    const today = new Date();
-    const timeDiff = today.getTime() - dob.getTime();
-    const ageInDays = Math.floor(timeDiff / (1000 * 3600 * 24));
-    const ageInYears = Math.floor(ageInDays / 365);
-    return ageInYears;
-  }
