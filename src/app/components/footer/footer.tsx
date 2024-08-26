@@ -7,7 +7,7 @@ export default function Footer() {
     const height: string = "30";
 
     return (
-        <Box style={{ backgroundColor: 'var(--gray-2)', padding: '1rem 0' }}>
+        <Box style={{ backgroundColor: 'var(--gray-2)', padding: '1rem 0', position: "fixed", bottom: "0", width: "100%"}} >
             <Flex justify="center" align="center" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1rem' }}>
                 <Flex gap="6">
                     <Link href="https://github.com/alexmar07" target="_blank" rel="noopener noreferrer">

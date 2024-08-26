@@ -27,7 +27,7 @@ export default function RootLayout({
             <div style={{zIndex: -1, position: "fixed", width: "100vw", height: "100vh"}}>
               <Image src="/bg.jpg" alt="Not found" layout="fill" objectFit="cover"/>
             </div>
-            <Flex direction="column" style={{ minHeight: '100vh' }}>
+            <Flex direction="column">
               <Box style={{ flex: 1 }}>
                 <Nav />
                 {children}
