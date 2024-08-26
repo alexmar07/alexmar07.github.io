@@ -7,7 +7,7 @@ export default function Home() {
         <Heading size={{initial: "7", xs : "7", xl: "9"}}>
             Alessandro Marotta
         </Heading>
-        <Text size={{initial: "5", xs: "5", xl: "7"}}> Sviluppatore Backend</Text>
+        <Text size={{initial: "5", xs: "5", xl: "7"}}>Backend Engineer</Text>
       </Flex>
     </Box>
   );
